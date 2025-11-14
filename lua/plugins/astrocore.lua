@@ -79,5 +79,15 @@ return {
         -- ["<C-S>"] = false,
       },
     },
+    autocmds = {
+      open_dashboard = {
+        {
+          event = "VimEnter",
+          callback = function()
+            if vim.fn.argc() == 0 then require("snacks").dashboard() end
+          end,
+        },
+      },
+    },
   },
 }
