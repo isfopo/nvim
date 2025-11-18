@@ -1,3 +1,8 @@
+local orig_del_augroup = vim.api.nvim_del_augroup_by_id
+vim.api.nvim_del_augroup_by_id = function(id)
+  pcall(orig_del_augroup, id) -- Safely ignore errors for already-deleted augroups
+end
+
 require("lazy").setup({
   {
     "AstroNvim/AstroNvim",
