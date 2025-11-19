@@ -11,7 +11,7 @@ return {
         "pyright",
         "html-lsp",
         "css-lsp",
-        "sass-language-server",
+        -- "sass-language-server",
         "typescript-language-server",
         "omnisharp",
         "rust-analyzer",
@@ -34,9 +34,9 @@ return {
 
         -- install linters
         "flake8",
-        "eslint",
-        "clippy",
-        "clang-tidy",
+        -- "eslint",
+        -- "clippy",
+        -- "clang-tidy",
 
         -- install any other package
         "tree-sitter-cli",
