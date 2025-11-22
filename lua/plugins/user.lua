@@ -32,6 +32,9 @@ return {
           return vim.g.snacks_words ~= false and vim.b[buf].snacks_words ~= false
         end,
       },
+      notifier = {
+        timeout = 10000,
+      },
       dashboard = {
         width = 60,
         row = nil, -- dashboard position. nil for center
