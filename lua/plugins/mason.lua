@@ -14,9 +14,12 @@ return {
         -- "sass-language-server",
         "typescript-language-server",
         "omnisharp",
+        "omnisharp-mono",
         "rust-analyzer",
         "svelte-language-server",
         "clangd",
+        "cspell",
+        "yaml-language-server",
 
         -- install formatters
         "stylua",
