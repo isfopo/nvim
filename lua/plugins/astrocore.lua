@@ -61,6 +61,9 @@ return {
         ["]b"] = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
         ["[b"] = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
 
+        -- remap redo to 'r' instead of <C-r>
+        ["r"] = { function() vim.cmd "redo" end, desc = "Redo" },
+
         -- mappings seen under group name "Buffer"
         ["<Leader>bd"] = {
           function()
