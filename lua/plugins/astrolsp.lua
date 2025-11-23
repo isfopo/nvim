@@ -27,12 +27,27 @@ return {
     },
     -- enable servers that you already have installed without mason
     servers = {
+      "omnisharp",
       -- "pyright"
     },
     -- customize language server configuration options passed to `lspconfig`
     ---@diagnostic disable: missing-fields
     config = {
       -- clangd = { capabilities = { offsetEncoding = "utf-8" } },
+      omnisharp = {
+        cmd = { "omnisharp" },
+        enable_editorconfig_support = true,
+        enable_ms_build_load_projects_on_demand = false,
+        enable_roslyn_analyzers = true,
+        organize_imports_on_format = true,
+        enable_import_completion = true,
+        sdk_include_prereleases = true,
+        analyze_open_documents_only = false,
+      },
+      omnisharp_mono = {
+        cmd = { "omnisharp-mono" },
+        use_mono = true,
+      },
     },
     -- customize how language servers are attached
     handlers = {
