@@ -82,9 +82,20 @@ return {
           { icon = " ", title = "Recent Files", section = "recent_files", indent = 2, padding = 2 },
           { section = "keys", gap = 1, padding = 1 },
           { section = "startup" },
-        },
+         },
+       },
+      picker = {
+        sources = {
+          files = {
+            cmd = "fd"
+          },
+          grep = {
+            cmd = "ag",
+            git = false
+          }
+        }
       },
-    },
+     },
   },
   -- You can disable default plugins as follows:
   { "max397574/better-escape.nvim", enabled = false },
