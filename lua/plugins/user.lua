@@ -4,24 +4,23 @@ return {
   -- customize snacks options
   {
     "folke/snacks.nvim",
-    opts = {
-      notifier = {
-        timeout = 10000,
-      },
-      input = {},
-      terminal = {},
-      picker = {
-        sources = {
-          files = {
-            cmd = "fd",
-          },
-          grep = {
-            cmd = "ag",
-            git = false,
-          },
-        },
-      },
-    },
+    opts = function(_, opts)
+      opts.notifier = opts.notifier or {}
+      opts.notifier.timeout = 10000
+      opts.input = opts.input or {}
+      opts.terminal = opts.terminal or {}
+      opts.scope = { enabled = false }
+      opts.indent = opts.indent or {}
+      opts.indent.scope = opts.indent.scope or {}
+      opts.indent.scope.enabled = false
+      opts.indent.scope.treesitter = opts.indent.scope.treesitter or {}
+      opts.indent.scope.treesitter.injections = false
+      opts.picker = opts.picker or {}
+      opts.picker.sources = opts.picker.sources or {}
+      opts.picker.sources.files = opts.picker.sources.files or { cmd = "fd" }
+      opts.picker.sources.grep = opts.picker.sources.grep or { cmd = "ag", git = false }
+      return opts
+    end,
   },
   -- You can disable default plugins as follows:
   { "max397574/better-escape.nvim", enabled = false },
