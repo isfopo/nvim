@@ -11,35 +11,22 @@ return {
         "pyright",
         "html-lsp",
         "css-lsp",
-        -- "sass-language-server",
         "typescript-language-server",
-        "omnisharp",
-        "omnisharp-mono",
         "rust-analyzer",
-        "svelte-language-server",
-        "clangd",
-        "cspell",
         "yaml-language-server",
 
         -- install formatters
         "stylua",
         "black",
         "prettier",
-        "csharpier",
-        "rustfmt",
-        "clang-format",
 
         -- install debuggers
         "debugpy",
         "js-debug-adapter",
-        "netcoredbg",
         "codelldb",
 
         -- install linters
         "flake8",
-        -- "eslint",
-        -- "clippy",
-        -- "clang-tidy",
 
         -- install any other package
         "tree-sitter-cli",

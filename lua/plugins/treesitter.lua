@@ -15,11 +15,9 @@ return {
       "python",
       "csv",
       "regex",
-      "cpp",
       "rust",
-      "c_sharp",
-      "razor",
-      "supercollider",
+      "yaml",
+      "go",
       -- add more arguments for adding more treesitter parsers
     },
   },

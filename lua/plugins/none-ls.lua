@@ -16,13 +16,14 @@ return {
     opts.sources = require("astrocore").list_insert_unique(opts.sources, {
       null_ls.builtins.completion.spell,
 
-      -- Set a formatter
+      -- Set formatters
       null_ls.builtins.formatting.stylua,
       null_ls.builtins.formatting.prettier,
+      null_ls.builtins.formatting.black,
 
-      -- Set a linter
+      -- Set linters
       null_ls.builtins.diagnostics.yamllint,
-      null_ls.builtins.diagnostics.pylint,
+      null_ls.builtins.diagnostics.flake8,
     })
   end,
 }
