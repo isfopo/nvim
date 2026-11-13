@@ -21,9 +21,7 @@ return {
       null_ls.builtins.formatting.prettier,
       null_ls.builtins.formatting.black,
 
-      -- Set linters
-      null_ls.builtins.diagnostics.yamllint,
-      null_ls.builtins.diagnostics.flake8,
+      -- Linters are provided by language servers (pyright, rust-analyzer, etc.)
     })
   end,
 }
