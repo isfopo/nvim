@@ -27,8 +27,14 @@ return {
     },
     -- enable servers that you already have installed without mason
     servers = {
-      -- "pyright"
+      "lua_ls",
+      "pyright",
+      "html",
+      "cssls",
+      "ts_ls",
+      "rust_analyzer",
       "gopls",
+      "yamlls",
     },
     -- customize language server configuration options passed to `lspconfig`
     ---@diagnostic disable: missing-fields
