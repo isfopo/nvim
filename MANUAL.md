@@ -244,6 +244,8 @@ Dependencies: `lilypond`, `mpv`, `ffmpeg`.
 | `<Leader>bd` | Close buffer from tabline |
 | `Ctrl-e` | Toggle file explorer sidebar |
 | `Ctrl-p` | Find files |
+| `Ctrl-Tab` | Next buffer |
+| `Ctrl-Shift-Tab` | Previous buffer |
 
 ### OpenCode (AI)
 
