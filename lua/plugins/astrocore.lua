@@ -51,6 +51,13 @@ return {
         -- remap redo to 'r' instead of <C-r>
         ["r"] = { function() vim.cmd "redo" end, desc = "Redo" },
 
+        -- VS Code-like file explorer / quick open
+        ["<C-e>"] = { "<Cmd>Neotree toggle<CR>", desc = "Toggle Explorer" },
+        ["<C-p>"] = {
+          function() require("snacks").picker.files() end,
+          desc = "Find Files",
+        },
+
         -- mappings seen under group name "Buffer"
         ["<Leader>bd"] = {
           function()
