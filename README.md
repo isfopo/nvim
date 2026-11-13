@@ -1,5 +1,7 @@
 # AstroNvim Configuration
 
+See `MANUAL.md` for a full user manual including Neovim basics.
+
 **NOTE:** This is for AstroNvim v5+
 
 A comprehensive Neovim configuration based on [AstroNvim](https://github.com/AstroNvim/AstroNvim) with enhanced features for development across multiple languages including C#, Python, JavaScript/TypeScript, Rust, Lua, and SuperCollider.
