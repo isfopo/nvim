@@ -93,6 +93,10 @@ return {
         ["<C-Tab>"] = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
         ["<C-S-Tab>"] = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
 
+        -- VS Code-like cursor history navigation
+        ["<M-Left>"] = { "<C-o>", desc = "Jump back" },
+        ["<M-Right>"] = { "<C-i>", desc = "Jump forward" },
+
         -- mappings seen under group name "Buffer"
         ["<Leader>bd"] = {
           function()

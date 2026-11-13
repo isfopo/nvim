@@ -247,6 +247,8 @@ Dependencies: `lilypond`, `mpv`, `ffmpeg`.
 | `Ctrl-p` | Find files |
 | `Ctrl-Tab` | Next buffer |
 | `Ctrl-Shift-Tab` | Previous buffer |
+| `Alt-Left` | Jump back (cursor history) |
+| `Alt-Right` | Jump forward (cursor history) |
 
 ### OpenCode (AI)
 
