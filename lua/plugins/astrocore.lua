@@ -52,7 +52,38 @@ return {
         ["r"] = { function() vim.cmd "redo" end, desc = "Redo" },
 
         -- VS Code-like file explorer / quick open
-        ["<C-e>"] = { "<Cmd>Neotree toggle<CR>", desc = "Toggle Explorer" },
+        ["<C-b>"] = {
+          function()
+            local neo_win
+            for _, w in ipairs(vim.api.nvim_list_wins()) do
+              if vim.bo[vim.api.nvim_win_get_buf(w)].filetype == "neo-tree" then neo_win = w end
+            end
+            if neo_win then
+              vim.cmd "Neotree close"
+            else
+              vim.cmd "Neotree focus"
+            end
+          end,
+          desc = "Toggle Explorer (focus on open)",
+        },
+        ["<C-e>"] = {
+          function()
+            local neo_win
+            for _, w in ipairs(vim.api.nvim_list_wins()) do
+              if vim.bo[vim.api.nvim_win_get_buf(w)].filetype == "neo-tree" then neo_win = w end
+            end
+            if not neo_win then
+              vim.cmd "Neotree focus"
+              return
+            end
+            if vim.bo.filetype == "neo-tree" then
+              vim.cmd.wincmd "p"
+            else
+              vim.api.nvim_set_current_win(neo_win)
+            end
+          end,
+          desc = "Toggle Explorer Focus",
+        },
         ["<C-p>"] = {
           function() require("snacks").picker.files() end,
           desc = "Find Files",
