@@ -13,6 +13,8 @@ return {
         "css-lsp",
         "typescript-language-server",
         "rust-analyzer",
+        "gopls",
+        "delve",
         "yaml-language-server",
 
         -- install formatters

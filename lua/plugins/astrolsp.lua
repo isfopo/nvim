@@ -28,11 +28,24 @@ return {
     -- enable servers that you already have installed without mason
     servers = {
       -- "pyright"
+      "gopls",
     },
     -- customize language server configuration options passed to `lspconfig`
     ---@diagnostic disable: missing-fields
     config = {
       -- clangd = { capabilities = { offsetEncoding = "utf-8" } },
+      gopls = {
+        settings = {
+          gopls = {
+            analyses = {
+              unusedparams = true,
+              shadow = true,
+            },
+            staticcheck = true,
+            gofumpt = false,
+          },
+        },
+      },
     },
     -- customize how language servers are attached
     handlers = {
