@@ -166,6 +166,12 @@ Mason installs tools listed in `lua/plugins/mason.lua`.
 - lua, vim, javascript, typescript, css, scss, html, python, csv, regex,
   rust, yaml, go
 
+Markdown fenced code blocks are highlighted for common languages through a
+custom injection query in `lua/polish.lua`. Neovim 0.12's built-in
+`#set-lang-from-info-string!` directive is currently broken, so unsupported
+info strings are shown as raw code blocks. Snacks scope/indent scope injections
+are disabled to avoid the same treesitter injection errors.
+
 ## 11. Debugging
 
 AstroNvim provides nvim-dap with these keys:
@@ -242,6 +248,20 @@ Dependencies: `lilypond`, `mpv`, `ffmpeg`.
 | `r` | Redo |
 | `]b` / `[b` | Next/previous buffer |
 | `<Leader>bd` | Close buffer from tabline |
+| `Ctrl-Shift-w` | Close current buffer |
+| `Ctrl-q` | Close current buffer |
+| `Ctrl-z` | Undo |
+| `Ctrl-y` | Redo |
+| `Ctrl-s` | Save file |
+| `Ctrl-a` | Select all |
+| `Ctrl-d` | Duplicate line/selection |
+| `Ctrl-f` | Find in file |
+| `Ctrl-h` | Replace in file |
+| `Ctrl-n` | New file |
+| `Ctrl-o` | Open file |
+| `Ctrl-/` | Toggle comment |
+| `Ctrl-Shift-k` | Delete line |
+| `Ctrl-Shift-d` | Duplicate line/selection |
 | `Ctrl-b` | Open/close file explorer sidebar (focus on open) |
 | `Ctrl-e` | Toggle focus between editor and explorer |
 | `Ctrl-p` | Find files |

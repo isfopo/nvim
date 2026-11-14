@@ -93,6 +93,24 @@ return {
         ["<C-Tab>"] = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
         ["<C-S-Tab>"] = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
 
+        -- VS Code-like close current buffer
+        ["<C-S-w>"] = { function() require("astrocore.buffer").close() end, desc = "Close buffer" },
+        ["<C-q>"] = { function() require("astrocore.buffer").close() end, desc = "Close buffer" },
+
+        -- Conventional editing shortcuts (normal mode)
+        ["<C-z>"] = { "<cmd>undo<cr>", desc = "Undo" },
+        ["<C-y>"] = { "<cmd>redo<cr>", desc = "Redo" },
+        ["<C-s>"] = { "<cmd>w<cr>", desc = "Save file" },
+        ["<C-a>"] = { "ggVG", desc = "Select all" },
+        ["<C-d>"] = { "<cmd>t.<cr>", desc = "Duplicate line" },
+        ["<C-f>"] = { "/", desc = "Find" },
+        ["<C-h>"] = { ":%s/", desc = "Replace" },
+        ["<C-n>"] = { "<cmd>enew<cr>", desc = "New file" },
+        ["<C-o>"] = { function() require("snacks").picker.files() end, desc = "Open file" },
+        ["<C-_>"] = { "gcc", remap = true, desc = "Toggle comment" },
+        ["<C-S-k>"] = { "<cmd>d<cr>", desc = "Delete line" },
+        ["<C-S-d>"] = { "<cmd>t.<cr>", desc = "Duplicate line" },
+
         -- VS Code-like cursor history navigation
         ["<M-Left>"] = { "<C-o>", desc = "Jump back" },
         ["<M-Right>"] = { "<C-i>", desc = "Jump forward" },
@@ -113,6 +131,11 @@ return {
 
         -- setting a mapping to false will disable it
         -- ["<C-S>"] = false,
+      },
+      x = {
+        ["<C-_>"] = { "gc", remap = true, desc = "Toggle comment" },
+        ["<C-d>"] = { "y'>p", desc = "Duplicate selection" },
+        ["<C-S-d>"] = { "y'>p", desc = "Duplicate selection" },
       },
     },
   },
