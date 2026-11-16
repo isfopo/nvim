@@ -4,7 +4,7 @@ See `MANUAL.md` for a full user manual including Neovim basics.
 
 **NOTE:** This is for AstroNvim v5+
 
-A comprehensive Neovim configuration based on [AstroNvim](https://github.com/AstroNvim/AstroNvim) with enhanced features for development across multiple languages including C#, Python, JavaScript/TypeScript, Rust, Lua, and SuperCollider.
+A comprehensive Neovim configuration based on [AstroNvim](https://github.com/AstroNvim/AstroNvim) with enhanced features for development across multiple languages including Python, JavaScript/TypeScript, Rust, Lua, LilyPond, and SuperCollider.
 
 ## ✨ Features & Capabilities
 
@@ -17,13 +17,6 @@ A comprehensive Neovim configuration based on [AstroNvim](https://github.com/Ast
 - **Dashboard**: [Snacks](https://github.com/folke/snacks.nvim) dashboard with project management
 
 ### 💻 Language Support
-
-#### C# / .NET Development
-- **OmniSharp LSP**: Full C# language server support with Roslyn
-- **Easy Dotnet**: Project management, testing, debugging, and building
-- **Netcoredbg**: Integrated debugging for .NET applications
-- **Csharpier**: Code formatting
-- **Test Runner**: Integrated test execution and debugging
 
 #### Python Development
 - **Pyright LSP**: Type checking and IntelliSense
@@ -48,6 +41,20 @@ A comprehensive Neovim configuration based on [AstroNvim](https://github.com/Ast
 - **scnvim**: SuperCollider development environment
 - **Post Window**: Integrated REPL and output display
 - **Server Control**: Start/stop SuperCollider server
+
+#### LilyPond
+- **nvim-lilypond-suite**: LilyPond editing support
+- **Async `:make`**: compile scores
+- **Audio playback**: `mpv` + `ffmpeg`
+- **Dependencies**: `lilypond`, `mpv`, `ffmpeg`
+
+#### PDF Viewing
+- **pdfreader.nvim**: view PDFs inside Neovim
+- **View modes**: standard, dark, and text-only
+- **Bookmarks and recent books**: via Telescope
+- **Requirements**: Kitty or Ghostty, ImageMagick, and `poppler-utils` (`pdftotext`, `pdfinfo`, `pdftohtml`)
+- **Note**: Ghostscript is used by ImageMagick for PDF support
+- **Fallback**: text mode when a supported terminal is unavailable
 
 #### Web Development
 - **HTML/CSS LSP**: Web development support
@@ -150,15 +157,6 @@ Lazy.nvim will automatically install all plugins and Mason tools on first startu
 | `<Tab>` | Complete/Accept | Complete or accept AI suggestion |
 | `<S-Tab>` | Previous | Previous completion/snippet |
 | `<C-Space>` | Trigger | Manually trigger completion |
-
-### .NET Development (Easy Dotnet)
-| Key | Action | Description |
-|-----|--------|-------------|
-| `<C-p>` | Run Project | Run .NET project |
-| `<leader>r` | Run Test | Run test from buffer |
-| `<leader>R` | Run All Tests | Run all tests |
-| `<leader>d` | Debug Test | Debug test |
-| `<leader>p` | Peek Stacktrace | View test failure details |
 
 ### SuperCollider (SCNvim)
 | Key | Action | Description |

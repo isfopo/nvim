@@ -239,6 +239,22 @@ Plugin: `martineausimon/nvim-lilypond-suite`
 
 Dependencies: `lilypond`, `mpv`, `ffmpeg`.
 
+### PDF Viewing
+
+Plugin: `r-pletnev/pdfreader.nvim`
+
+- View PDFs inside Neovim
+- Standard, dark, and text-only view modes
+- Bookmarks and recent books via Telescope
+- `:PDFReader` command with subcommands
+- Page navigation: `n` / `p`
+- Zoom: `z`, `q`, `e`
+
+Requirements: Kitty or Ghostty, ImageMagick, and `poppler-utils`
+(`pdftotext`, `pdfinfo`, `pdftohtml`). Ghostscript is used by
+ImageMagick for PDF support. Falls back to text mode when a supported
+terminal is unavailable.
+
 ## 13. Key Mappings
 
 ### Core
@@ -319,3 +335,4 @@ Dependencies: `lilypond`, `mpv`, `ffmpeg`.
 - `lua/plugins/aerial.lua`
 - `lua/plugins/dap-go.lua`
 - `lua/plugins/lilypond.lua`
+- `lua/plugins/pdfreader.lua`
